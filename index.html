@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scale Meter Generator - Made by 010Mak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="control-section">
+            <div class="input-group">
+                <label for="minValue">Min Value:</label>
+                <input type="number" id="minValue" name="minValue" required>
+            </div>
+            <div class="input-group">
+                <label for="maxValue">Max Value:</label>
+                <input type="number" id="maxValue" name="maxValue" required>
+            </div>
+            <div class="input-group">
+                <label for="increments">Increments:</label>
+                <input type="number" id="increments" name="increments" required>
+            </div>
+            <div class="input-group">
+                <label for="ticks">Number of Ticks:</label>
+                <input type="number" id="ticks" name="ticks" required>
+            </div>
+            <div class="input-group">
+                <label for="subTicks">Number of Sub Ticks:</label>
+                <input type="number" id="subTicks" name="subTicks" required>
+            </div>
+            <div class="input-group">
+                <label for="showDecimals">Show Decimals:</label>
+                <input type="checkbox" id="showDecimals" name="showDecimals">
+            </div>
+            <div id="colorZonesContainer"></div>
+            <div class="input-group">
+                <button onclick="addColorZone()">Add Color Zone</button>
+            </div>
+            <div class="input-group">
+                <label for="numberSize">Number Size:</label>
+                <input type="number" id="numberSize" name="numberSize" value="18" required>
+            </div>
+            <div class="input-group">
+                <label for="tickLength">Tick Length:</label>
+                <input type="number" id="tickLength" name="tickLength" value="20" required>
+            </div>
+            <div class="input-group">
+                <label for="specialNumber">Special Number:</label>
+                <input type="number" id="specialNumber" name="specialNumber">
+            </div>
+            <div class="input-group">
+                <label for="specialCharacter">Special Character:</label>
+                <select id="specialCharacter" name="specialCharacter">
+                    <option value="∞">Infinity (∞)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <button onclick="downloadPNG()">Download as PNG</button>
+            </div>
+            <div class="input-group">
+                <button onclick="drawScaleMeter()">Draw Scale Meter</button>
+            </div>
+        </div>
+
+        <div class="meter-section">
+            <canvas id="scaleCanvas" width="111" height="825"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
